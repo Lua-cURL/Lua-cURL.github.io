@@ -1,0 +1,1787 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Class_httpform">Class httpform </a></li>
+<li><a href="#Class_error">Class error </a></li>
+<li><a href="#Class_easy">Class easy </a></li>
+<li><a href="#Class_multi">Class multi </a></li>
+<li><a href="#Class_share">Class share </a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><strong>lcurl</strong></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>lcurl</code></h1>
+<p></p>
+<p></p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#form">form ()</a></td>
+	<td class="summary">Create HTTP multipart/formdata object.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#easy">easy ([options])</a></td>
+	<td class="summary">Create Easy object</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#multi">multi ([options])</a></td>
+	<td class="summary">Create Multi object</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#share">share ([options])</a></td>
+	<td class="summary">Create Share object</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#version">version ()</a></td>
+	<td class="summary">Returns libcurl version as human readable string</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#version_info">version_info ([param])</a></td>
+	<td class="summary">Returns libcurl version as table</td>
+	</tr>
+</table>
+<h2><a href="#Class_httpform">Class httpform </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#httpform:add_content">httpform:add_content (name, content[, type[, headers]])</a></td>
+	<td class="summary">Add new part to form.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#httpform:add_buffer">httpform:add_buffer (name, filename, content[, type[, headers]])</a></td>
+	<td class="summary">Add new part to form.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#httpform:add_file">httpform:add_file (name, path[, type[, filename[, headers]]])</a></td>
+	<td class="summary">Add new part to form.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#httpform:add_stream">httpform:add_stream (name[, filename][, type][, headers], size, reader[, context])</a></td>
+	<td class="summary">Add new part to form.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#httpform:get">httpform:get ()</a></td>
+	<td class="summary">Serialize multipart/formdata HTTP POST chain.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#httpform:get">httpform:get (writer[, context])</a></td>
+	<td class="summary">Serialize multipart/formdata HTTP POST chain.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#httpform:get">httpform:get (writer)</a></td>
+	<td class="summary">Serialize multipart/formdata HTTP POST chain.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#httpform:free">httpform:free ()</a></td>
+	<td class="summary">Free multipart/formdata.</td>
+	</tr>
+</table>
+<h2><a href="#Class_error">Class error </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#error:category">error:category ()</a></td>
+	<td class="summary">Get the error category.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#error:no">error:no ()</a></td>
+	<td class="summary">Get the number value of error.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#error:name">error:name ()</a></td>
+	<td class="summary">Get the error name.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#error:msg">error:msg ()</a></td>
+	<td class="summary">Get the error description.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#error:__tostring">error:__tostring ()</a></td>
+	<td class="summary">Get the full error description.</td>
+	</tr>
+</table>
+<h2><a href="#Class_easy">Class easy </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#easy:perfom">easy:perfom ()</a></td>
+	<td class="summary">Perform a file transfer</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#easy:escape">easy:escape (url)</a></td>
+	<td class="summary">URL encodes the given string</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#easy:unescape">easy:unescape (url)</a></td>
+	<td class="summary">URL decodes the given string</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#easy:reset">easy:reset ()</a></td>
+	<td class="summary">Re-initializes all options previously set.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#easy:pause">easy:pause (mask)</a></td>
+	<td class="summary">Pause and unpause a connection.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#easy:close">easy:close ()</a></td>
+	<td class="summary">End easy session</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#easy:setopt">easy:setopt (opt, ...)</a></td>
+	<td class="summary">Set options.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#easy:unsetopt">easy:unsetopt (opt)</a></td>
+	<td class="summary">Reset option to default value.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#easy:getinfo">easy:getinfo (info)</a></td>
+	<td class="summary">Get information.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#easy:setopt_writefunction">easy:setopt_writefunction (writer[, context])</a></td>
+	<td class="summary">Set writer function.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#easy:setopt_writefunction">easy:setopt_writefunction (writer)</a></td>
+	<td class="summary">Set writer function.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#easy:setopt_headerfunction">easy:setopt_headerfunction (writer[, context])</a></td>
+	<td class="summary">Set header function.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#easy:setopt_headerfunction">easy:setopt_headerfunction (writer)</a></td>
+	<td class="summary">Set header function.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#easy:setopt_readfunction">easy:setopt_readfunction (reader[, context])</a></td>
+	<td class="summary">Set reader function.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#easy:setopt_readfunction">easy:setopt_readfunction (reader)</a></td>
+	<td class="summary">Set reader function.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#easy:setopt_progressfunction">easy:setopt_progressfunction (progress[, context])</a></td>
+	<td class="summary">Set progress function.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#easy:setopt_progressfunction">easy:setopt_progressfunction (progress)</a></td>
+	<td class="summary">Set progress function.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#easy:setopt_httppost">easy:setopt_httppost (data)</a></td>
+	<td class="summary">Set HTTP multipart/formdata.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#easy:setopt_postfields">easy:setopt_postfields (data[, length=#data])</a></td>
+	<td class="summary">Set HTTP multipart/formdata.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#easy:setopt_share">easy:setopt_share (data)</a></td>
+	<td class="summary">Set curl share object.</td>
+	</tr>
+</table>
+<h2><a href="#Class_multi">Class multi </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#multi:add_handle">multi:add_handle (handle)</a></td>
+	<td class="summary">Add Easy object.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#multi:remove_handle">multi:remove_handle (handle)</a></td>
+	<td class="summary">Remove Easy object.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#multi:perfom">multi:perfom ()</a></td>
+	<td class="summary">reads/writes available data from each easy handle.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#multi:info_read">multi:info_read ([remove])</a></td>
+	<td class="summary">Read multi stack informationals.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#multi:setopt">multi:setopt (opt, ...)</a></td>
+	<td class="summary">Set options.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#multi:setopt_timerfunction">multi:setopt_timerfunction (timer[, context])</a></td>
+	<td class="summary">Set timer callback.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#multi:setopt_timerfunction">multi:setopt_timerfunction (timer)</a></td>
+	<td class="summary">Set timer callback.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#multi:wait">multi:wait ([timeout])</a></td>
+	<td class="summary">Polls on all easy objects in a multi object.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#multi:timeout">multi:timeout ()</a></td>
+	<td class="summary">How long to wait for action before proceeding.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#multi:close">multi:close ()</a></td>
+	<td class="summary">End multi session.</td>
+	</tr>
+</table>
+<h2><a href="#Class_share">Class share </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#share:setopt">share:setopt (opt, ...)</a></td>
+	<td class="summary">Set options.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#share:close">share:close ()</a></td>
+	<td class="summary">End share session.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2><a name="Functions"></a>Functions</h2>
+    <dl class="function">
+    <dt>
+    <a name = "form"></a>
+    <strong>form ()</strong>
+    </dt>
+    <dd>
+    Create HTTP multipart/formdata object.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="index.html#Class_httpform">httpform</a></span>
+        new curl HTTP Post object context
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "easy"></a>
+    <strong>easy ([options])</strong>
+    </dt>
+    <dd>
+    Create Easy object
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">options</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="index.html#Class_easy">easy</a></span>
+        new curl easy object
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">
+ c = curl.easy{
+   url = <span class="string">'http://example.com'</span>,
+   [curl.OPT_VERBOSE] = <span class="keyword">true</span>,
+ }</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "multi"></a>
+    <strong>multi ([options])</strong>
+    </dt>
+    <dd>
+    Create Multi object
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">options</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="index.html#Class_multi">multi</a></span>
+        new curl multi object
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "share"></a>
+    <strong>share ([options])</strong>
+    </dt>
+    <dd>
+    Create Share object
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">options</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="index.html#Class_share">share</a></span>
+        new curl share object
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "version"></a>
+    <strong>version ()</strong>
+    </dt>
+    <dd>
+    Returns libcurl version as human readable string
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "version_info"></a>
+    <strong>version_info ([param])</strong>
+    </dt>
+    <dd>
+    Returns libcurl version as table
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">param</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         specific version info
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        full version into if `param` was not specify
+    </ol>
+     <h3>Or</h3>
+    <ol>
+
+        specific info parameter
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">
+ proto = curl.version_info(<span class="string">'protocols'</span>)
+ <span class="keyword">if</span> proto.HTTP <span class="keyword">then</span> ... -- libcurl support http protocol</pre>
+    </ul>
+
+</dd>
+</dl>
+    <h2><a name="Class_httpform"></a>Class httpform </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "httpform:add_content"></a>
+    <strong>httpform:add_content (name, content[, type[, headers]])</strong>
+    </dt>
+    <dd>
+    Add new part to form.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         provide the name of this part
+        </li>
+        <li><span class="parameter">content</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         actual data to send
+        </li>
+        <li><span class="parameter">type</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         provides the content-type for this part
+        </li>
+        <li><span class="parameter">headers</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         specifies extra headers for the form POST section
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        self
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "httpform:add_buffer"></a>
+    <strong>httpform:add_buffer (name, filename, content[, type[, headers]])</strong>
+    </dt>
+    <dd>
+    Add new part to form.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         provide the name of this part
+        </li>
+        <li><span class="parameter">filename</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         provides the filename field in the content header
+        </li>
+        <li><span class="parameter">content</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         actual data to send
+        </li>
+        <li><span class="parameter">type</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         provides the content-type for this part
+        </li>
+        <li><span class="parameter">headers</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         specifies extra headers for the form POST section
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        self
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "httpform:add_file"></a>
+    <strong>httpform:add_file (name, path[, type[, filename[, headers]]])</strong>
+    </dt>
+    <dd>
+    Add new part to form.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         provide the name of this part
+        </li>
+        <li><span class="parameter">path</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         path to file that contain actual data to send
+        </li>
+        <li><span class="parameter">type</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         provides the content-type for this part
+        </li>
+        <li><span class="parameter">filename</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         provides the filename field in the content header.
+   By default it is basename of path.
+        </li>
+        <li><span class="parameter">headers</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         specifies extra headers for the form POST section
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        self
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "httpform:add_stream"></a>
+    <strong>httpform:add_stream (name[, filename][, type][, headers], size, reader[, context])</strong>
+    </dt>
+    <dd>
+    Add new part to form.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         provide the name of this part
+        </li>
+        <li><span class="parameter">filename</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         provides the filename field in the content header.
+        </li>
+        <li><span class="parameter">type</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         provides the content-type for this part
+        </li>
+        <li><span class="parameter">headers</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         specifies extra headers for the form POST section
+        </li>
+        <li><span class="parameter">size</span>
+            <span class="types"><span class="type">number</span></span>
+         stream size in bytes
+        </li>
+        <li><span class="parameter">reader</span>
+            <span class="types"><span class="type">function/object</span></span>
+
+        </li>
+        <li><span class="parameter">context</span>
+         reader context
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        self
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="index.html#easy:setopt_readfunction">easy:setopt_readfunction</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "httpform:get"></a>
+    <strong>httpform:get ()</strong>
+    </dt>
+    <dd>
+    Serialize multipart/formdata HTTP POST chain.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        string serialized data
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="global">print</span>(post:get())</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "httpform:get"></a>
+    <strong>httpform:get (writer[, context])</strong>
+    </dt>
+    <dd>
+    Serialize multipart/formdata HTTP POST chain.
+<p> Writer function can return true or number of written bytes.
+ Also if function does not return anything is considered as success.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">writer</span>
+            <span class="types"><span class="type">function</span></span>
+
+        </li>
+        <li><span class="parameter">context</span>
+         writer context
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        self
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">
+ t = {}
+ post:get(<span class="global">table</span>.insert, t)
+ <span class="global">print</span>(<span class="global">table</span>.concat(t))</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "httpform:get"></a>
+    <strong>httpform:get (writer)</strong>
+    </dt>
+    <dd>
+    Serialize multipart/formdata HTTP POST chain.
+<p> This call same as httpform:get(writer.write, writer)
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">writer</span>
+            <span class="types"><span class="type">object</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        self
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">
+ f = <span class="global">io</span>.open(...)
+ post:get(f)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "httpform:free"></a>
+    <strong>httpform:free ()</strong>
+    </dt>
+    <dd>
+    Free multipart/formdata.
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2><a name="Class_error"></a>Class error </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "error:category"></a>
+    <strong>error:category ()</strong>
+    </dt>
+    <dd>
+    Get the error category.
+
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        number of error category (curl.ERROR_XXX constants)
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">
+ <span class="keyword">if</span> err:category() == curl.ERROR_EASY <span class="keyword">then</span>
+ <span class="comment">-- proceed easy error
+</span> <span class="keyword">end</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "error:no"></a>
+    <strong>error:no ()</strong>
+    </dt>
+    <dd>
+    Get the number value of error.
+
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        number of error (curl.E_XXX constants)
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "error:name"></a>
+    <strong>error:name ()</strong>
+    </dt>
+    <dd>
+    Get the error name.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        error name (e.g. "UNSUPPORTED_PROTOCOL", "BAD_OPTION")
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "error:msg"></a>
+    <strong>error:msg ()</strong>
+    </dt>
+    <dd>
+    Get the error description.
+
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        error description (e.g. "Login denied")
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "error:__tostring"></a>
+    <strong>error:__tostring ()</strong>
+    </dt>
+    <dd>
+    Get the full error description.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        string that contain name, message and number of error
+    </ol>
+
+
+
+
+</dd>
+</dl>
+    <h2><a name="Class_easy"></a>Class easy </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "easy:perfom"></a>
+    <strong>easy:perfom ()</strong>
+    </dt>
+    <dd>
+    Perform a file transfer
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        self
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "easy:escape"></a>
+    <strong>easy:escape (url)</strong>
+    </dt>
+    <dd>
+    URL encodes the given string
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">url</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        encoded url
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "easy:unescape"></a>
+    <strong>easy:unescape (url)</strong>
+    </dt>
+    <dd>
+    URL decodes the given string
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">url</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        decoded url
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "easy:reset"></a>
+    <strong>easy:reset ()</strong>
+    </dt>
+    <dd>
+    Re-initializes all options previously set.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="index.html#Class_easy">easy</a></span>
+        self
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "easy:pause"></a>
+    <strong>easy:pause (mask)</strong>
+    </dt>
+    <dd>
+    Pause and unpause a connection.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">mask</span>
+            <span class="types"><span class="type">number</span></span>
+         set of bits that sets the new state of the connection (one of PAUSE_XXX constant)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="index.html#Class_easy">easy</a></span>
+        self
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "easy:close"></a>
+    <strong>easy:close ()</strong>
+    </dt>
+    <dd>
+    End easy session
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "easy:setopt"></a>
+    <strong>easy:setopt (opt, ...)</strong>
+    </dt>
+    <dd>
+    Set options.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">opt</span>
+            <span class="types"><span class="type">number</span> or <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         one of `curl.OPT_XXX` constant or options table
+        </li>
+        <li><span class="parameter">...</span>
+         value
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="index.html#Class_easy">easy</a></span>
+        self
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">
+ c:setopt(curl.OPT_URL, <span class="string">"http://example.com"</span>)
+ c:setopt(curl.OPT_READFUNCTION,
+    <span class="keyword">function</span>(t, n) <span class="keyword">return</span> <span class="global">table</span>.remove(t) <span class="keyword">end</span>,
+    {<span class="string">"1111"</span>, <span class="string">"2222"</span>}
+ )
+c:setopt{
+   url = <span class="string">'http://example.com'</span>,
+   [curl.OPT_VERBOSE] = <span class="keyword">true</span>,
+ }</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "easy:unsetopt"></a>
+    <strong>easy:unsetopt (opt)</strong>
+    </dt>
+    <dd>
+    Reset option to default value.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">opt</span>
+            <span class="types"><span class="type">number</span></span>
+         one of `curl.OPT_XXX` constant or options table
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="index.html#Class_easy">easy</a></span>
+        self
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">
+ c:unsetopt(curl.OPT_URL)
+ c:unsetopt(curl.OPT_READFUNCTION)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "easy:getinfo"></a>
+    <strong>easy:getinfo (info)</strong>
+    </dt>
+    <dd>
+    Get information.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">info</span>
+            <span class="types"><span class="type">number</span></span>
+         one of `curl.INFO_XXX` constant
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        value
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">
+ <span class="global">print</span>(c:getinfo(curl.INFO_EFFECTIVE_URL))
+ <span class="global">print</span>(c:getinfo(curl.INFO_TOTAL_TIME))
+ <span class="global">print</span>(c:getinfo(curl.INFO_RESPONSE_CODE))</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "easy:setopt_writefunction"></a>
+    <strong>easy:setopt_writefunction (writer[, context])</strong>
+    </dt>
+    <dd>
+    Set writer function.
+<p> A callback accepting one or two parameters.
+ The first is the writer context if any, and the second is a string with the data to be written.
+ Function must return `true` (any non number true value) or full data length or nothing to continue operation.
+ Otherwise the transfer will be aborted with an error.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">writer</span>
+            <span class="types"><span class="type">function</span></span>
+
+        </li>
+        <li><span class="parameter">context</span>
+         writer context
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        self
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "easy:setopt_writefunction"></a>
+    <strong>easy:setopt_writefunction (writer)</strong>
+    </dt>
+    <dd>
+    Set writer function.
+<p> This call same as easy:setopt_writefunction(writer.write, writer)
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">writer</span>
+            <span class="types"><span class="type">object</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        self
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "easy:setopt_headerfunction"></a>
+    <strong>easy:setopt_headerfunction (writer[, context])</strong>
+    </dt>
+    <dd>
+    Set header function.
+<p> A callback accepting one or two parameters.
+ The first is the writer context if any, and the second is a string with the data to be written.
+ Function must return `true` (any non number true value) or full data length or nothing to continue operation.
+ Otherwise the transfer will be aborted with an error.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">writer</span>
+            <span class="types"><span class="type">function</span></span>
+
+        </li>
+        <li><span class="parameter">context</span>
+         writer context
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        self
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "easy:setopt_headerfunction"></a>
+    <strong>easy:setopt_headerfunction (writer)</strong>
+    </dt>
+    <dd>
+    Set header function.
+<p> This call same as easy:setopt_headerfunction(writer.header, writer)
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">writer</span>
+            <span class="types"><span class="type">object</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        self
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "easy:setopt_readfunction"></a>
+    <strong>easy:setopt_readfunction (reader[, context])</strong>
+    </dt>
+    <dd>
+    Set reader function.
+<p> A callback accepting one or two parameters.
+ The first is the reader context if any, and the second is the maximum amount of data to be read.
+ You can ignore second argument and pass as mach data as you need. lcurl can split data.
+ Function must return data to continue operation. To stop operation it must return empty string on nil.
+ Otherwise the transfer will be aborted with an error.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">reader</span>
+            <span class="types"><span class="type">function</span></span>
+
+        </li>
+        <li><span class="parameter">context</span>
+         reader context
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        self
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "easy:setopt_readfunction"></a>
+    <strong>easy:setopt_readfunction (reader)</strong>
+    </dt>
+    <dd>
+    Set reader function.
+<p> This call same as easy:setopt_readfunction(reader.read, reader)
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">reader</span>
+            <span class="types"><span class="type">object</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        self
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "easy:setopt_progressfunction"></a>
+    <strong>easy:setopt_progressfunction (progress[, context])</strong>
+    </dt>
+    <dd>
+    Set progress function.
+<p> A callback accepting four or five parameters.
+ The first is the reader context if any, the second is the total number
+ of bytes expected to be downloaded in this transfer,
+ the third is the number of bytes downloaded so far,
+ the fourth is the total number of bytes expected to be uploaded
+ in this transfer, and the fifth is the number of bytes uploaded so far.
+ Function must return `true` or `1` or nothing to continue operation.
+ Otherwise the transfer will be aborted with an error `ABORTED_BY_CALLBACK`.<br/>
+<p> !!! NOTE !!! This is differents form libcurl API. In libcurl returning a non-zero
+ value from this callback will cause libcurl to abort the transfer and return.
+ This done to be consisted with writefunction that should return `true` to continue.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">progress</span>
+            <span class="types"><span class="type">function</span></span>
+
+        </li>
+        <li><span class="parameter">context</span>
+         progress context
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        self
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "easy:setopt_progressfunction"></a>
+    <strong>easy:setopt_progressfunction (progress)</strong>
+    </dt>
+    <dd>
+    Set progress function.
+<p> This call same as easy:setopt_progressfunction(progress.progress, progress)
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">progress</span>
+            <span class="types"><span class="type">object</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        self
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "easy:setopt_httppost"></a>
+    <strong>easy:setopt_httppost (data)</strong>
+    </dt>
+    <dd>
+    Set HTTP multipart/formdata.
+<p> Caller does not have to save data.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">data</span>
+            <span class="types"><a class="type" href="index.html#Class_httpform">httpform</a></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        self
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "easy:setopt_postfields"></a>
+    <strong>easy:setopt_postfields (data[, length=#data])</strong>
+    </dt>
+    <dd>
+    Set HTTP multipart/formdata.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">data</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+        </li>
+        <li><span class="parameter">length</span>
+            <span class="types"><span class="type">number</span></span>
+
+         (<em>default</em> #data)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        self
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "easy:setopt_share"></a>
+    <strong>easy:setopt_share (data)</strong>
+    </dt>
+    <dd>
+    Set curl share object.
+<p> Caller does not have to save data.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">data</span>
+            <span class="types"><a class="type" href="index.html#Class_share">share</a></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        self
+    </ol>
+
+
+
+
+</dd>
+</dl>
+    <h2><a name="Class_multi"></a>Class multi </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "multi:add_handle"></a>
+    <strong>multi:add_handle (handle)</strong>
+    </dt>
+    <dd>
+    Add Easy object.
+<p> Caller must ensure that easy object is alive until end of operation.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">handle</span>
+            <span class="types"><a class="type" href="index.html#Class_easy">easy</a></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="index.html#Class_multi">multi</a></span>
+        self
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "multi:remove_handle"></a>
+    <strong>multi:remove_handle (handle)</strong>
+    </dt>
+    <dd>
+    Remove Easy object.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">handle</span>
+            <span class="types"><a class="type" href="index.html#Class_easy">easy</a></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="index.html#Class_multi">multi</a></span>
+        self
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "multi:perfom"></a>
+    <strong>multi:perfom ()</strong>
+    </dt>
+    <dd>
+    reads/writes available data from each easy handle.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        handles number of active easy handles
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "multi:info_read"></a>
+    <strong>multi:info_read ([remove])</strong>
+    </dt>
+    <dd>
+    Read multi stack informationals.
+<p> Note. If curl_multi_remove_handle fail then there no error occure but handle jast stay in multi handle.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">remove</span>
+            <span class="types"><span class="type">remove</span></span>
+         easy handle if it done.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        0 there no informationals
+    </ol>
+     <h3>Or</h3>
+    <ol>
+        <li>
+           <span class="types"><a class="type" href="index.html#Class_easy">easy</a></span>
+        handle</li>
+        <li>
+           <span class="types"><span class="type">boolean</span></span>
+        true</li>
+    </ol>
+     <h3>Or</h3>
+    <ol>
+        <li>
+           <span class="types"><a class="type" href="index.html#Class_easy">easy</a></span>
+        handle</li>
+        <li>
+           <span class="types"><span class="type">nil</span></span>
+        </li>
+        <li>
+           <span class="types"><a class="type" href="index.html#Class_error">error</a></span>
+        error code</li>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "multi:setopt"></a>
+    <strong>multi:setopt (opt, ...)</strong>
+    </dt>
+    <dd>
+    Set options.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">opt</span>
+            <span class="types"><span class="type">number</span> or <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         one of `curl.OPT_MULTI_XXX` constant
+        </li>
+        <li><span class="parameter">...</span>
+         value
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="index.html#Class_multi">multi</a></span>
+        self
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">
+ c:setopt(curl.OPT_MULTI_MAXCONNECTS, <span class="number">10</span>)
+ c:setopt{maxconnects = <span class="number">10</span>}</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "multi:setopt_timerfunction"></a>
+    <strong>multi:setopt_timerfunction (timer[, context])</strong>
+    </dt>
+    <dd>
+    Set timer callback.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">timer</span>
+            <span class="types"><span class="type">function</span></span>
+         timer callback
+        </li>
+        <li><span class="parameter">context</span>
+         timer context
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="index.html#Class_multi">multi</a></span>
+        self
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "multi:setopt_timerfunction"></a>
+    <strong>multi:setopt_timerfunction (timer)</strong>
+    </dt>
+    <dd>
+    Set timer callback.
+<p> This call same as easy:setopt_writefunction(timer.timer, timer)
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">timer</span>
+            <span class="types"><span class="type">userdata</span> or <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         timer object
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="index.html#Class_multi">multi</a></span>
+        self
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "multi:wait"></a>
+    <strong>multi:wait ([timeout])</strong>
+    </dt>
+    <dd>
+    Polls on all easy objects in a multi object.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">timeout</span>
+            <span class="types"><span class="type">number</span></span>
+         milliseconds timeout. By default it is `multi:timeout()`.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        number of affected objects
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "multi:timeout"></a>
+    <strong>multi:timeout ()</strong>
+    </dt>
+    <dd>
+    How long to wait for action before proceeding.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        timeout milliseconds timeout
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "multi:close"></a>
+    <strong>multi:close ()</strong>
+    </dt>
+    <dd>
+    End multi session.
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2><a name="Class_share"></a>Class share </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "share:setopt"></a>
+    <strong>share:setopt (opt, ...)</strong>
+    </dt>
+    <dd>
+    Set options.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">opt</span>
+            <span class="types"><span class="type">number</span> or <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         one of `curl.OPT_SHARE_XXX` constant
+        </li>
+        <li><span class="parameter">...</span>
+         value
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="index.html#Class_share">share</a></span>
+        self
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">
+ c:setopt(curl.OPT_SHARE_SHARE, curl.LOCK_DATA_COOKIE)
+ c:setopt{share =  curl.LOCK_DATA_COOKIE}</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "share:close"></a>
+    <strong>share:close ()</strong>
+    </dt>
+    <dd>
+    End share session.
+
+
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.0</a></i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
