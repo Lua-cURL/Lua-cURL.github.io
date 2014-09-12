@@ -1,0 +1,424 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Tables">Tables</a></li>
+<li><a href="#Class_httpform">Class httpform </a></li>
+<li><a href="#Class_easy">Class easy </a></li>
+<li><a href="#Class_multi">Class multi </a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><strong>cURL</strong></li>
+  <li><a href="../modules/lcurl.html">lcurl</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>cURL</code></h1>
+<p>Provide same functions as `lcurl` module with some additions.</p>
+<p>
+ Here are the only functions that have been added or changed.
+</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#form">form (form)</a></td>
+	<td class="summary">Create HTTP multipart/formdata object.</td>
+	</tr>
+</table>
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#FORM_DESCRIPTION">FORM_DESCRIPTION</a></td>
+	<td class="summary">Form description table.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#form_stream">form_stream</a></td>
+	<td class="summary">Table describe stream part in form.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#form_file">form_file</a></td>
+	<td class="summary">Table describe file part in form.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#form_buffer">form_buffer</a></td>
+	<td class="summary">Table describe buffer part in form.</td>
+	</tr>
+</table>
+<h2><a href="#Class_httpform">Class httpform </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#httpform:add">httpform:add (form)</a></td>
+	<td class="summary">Add new part to form.</td>
+	</tr>
+</table>
+<h2><a href="#Class_easy">Class easy </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#easy:perfom">easy:perfom ([options])</a></td>
+	<td class="summary">Perform a file transfer</td>
+	</tr>
+</table>
+<h2><a href="#Class_multi">Class multi </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#multi:iperfom">multi:iperfom ()</a></td>
+	<td class="summary">Iterator that returns the next data, type and corresponding easy handle.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2><a name="Functions"></a>Functions</h2>
+    <dl class="function">
+    <dt>
+    <a name = "form"></a>
+    <strong>form (form)</strong>
+    </dt>
+    <dd>
+    Create HTTP multipart/formdata object.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">form</span>
+            <span class="types"><span class="type">FORM_DESCRIPTION</span></span>
+         description
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">Form</span></span>
+        new curl HTTP Post object context
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../modules/cURL.html#FORM_DESCRIPTION">FORM_DESCRIPTION</a>
+    </ul>
+
+
+</dd>
+</dl>
+    <h2><a name="Tables"></a>Tables</h2>
+    <dl class="function">
+    <dt>
+    <a name = "FORM_DESCRIPTION"></a>
+    <strong>FORM_DESCRIPTION</strong>
+    </dt>
+    <dd>
+    Form description table.
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">content_name</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a>, <a class="type" href="../modules/cURL.html#form">form_stream</a>, <a class="type" href="../modules/cURL.html#form">form_file</a> or <a class="type" href="../modules/cURL.html#form">form_buffer</a></span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">
+ post_form = cURL.form{
+
+   <span class="comment">-- file form filesystem
+</span>   name01 = {
+     file = <span class="string">"post_form.lua"</span>,
+     <span class="global">type</span> = <span class="string">"text/plain"</span>,
+     name = <span class="string">"post.lua"</span>,
+   },
+
+   <span class="comment">-- file form string
+</span>   name02 = {
+     data = <span class="string">"&lt;html&gt;&lt;bold&gt;bold&lt;/bold&gt;&lt;/html&gt;"</span>,
+     name = <span class="string">"dummy.html"</span>,
+     <span class="global">type</span> = <span class="string">"text/html"</span>,
+   },
+
+   <span class="comment">-- file form stream object
+</span>   name03 = {
+     stream  = Stream:new(<span class="string">'8'</span>, <span class="number">25</span>),
+     name    = <span class="string">"stream1.txt"</span>,
+     <span class="global">type</span>    = <span class="string">"text/plain"</span>,
+     headers = {
+       <span class="string">"X-Test-Char : 8"</span>,
+       <span class="string">"X-Test-length : 25"</span>,
+     }
+   },
+
+   <span class="comment">-- file form stream function
+</span>   name04 = {
+     stream  = stream,
+     length  = length,
+     name    = <span class="string">"stream2.txt"</span>,
+     <span class="global">type</span>    = <span class="string">"text/plain"</span>,
+   },
+
+ }</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "form_stream"></a>
+    <strong>form_stream</strong>
+    </dt>
+    <dd>
+    Table describe stream part in form.
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">stream</span>
+            <span class="types"><span class="type">function</span>, <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <span class="type">userdata</span></span>
+         stream function is same as in readfunction.
+        Also stream object may provide `length` method.
+        </li>
+        <li><span class="parameter">length</span>
+            <span class="types"><span class="type">number</span></span>
+
+         (<em>default</em> stream:length())
+        </li>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         file name
+        </li>
+        <li><span class="parameter">type</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         mime type (e.g. 'text/plain')
+        </li>
+        <li><span class="parameter">headers</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         array of headers
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "form_file"></a>
+    <strong>form_file</strong>
+    </dt>
+    <dd>
+    Table describe file part in form.
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">file</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         path to file in local FS (e.g. 'path/to/some/file.txt')
+        </li>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         file name
+         (<em>default</em> basename(file))
+        </li>
+        <li><span class="parameter">type</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         mime type (e.g. 'text/plain')
+        </li>
+        <li><span class="parameter">headers</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         array of headers
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "form_buffer"></a>
+    <strong>form_buffer</strong>
+    </dt>
+    <dd>
+    Table describe buffer part in form.
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">data</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         file content
+        </li>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         file name
+        </li>
+        <li><span class="parameter">type</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         mime type (e.g. 'text/plain')
+        </li>
+        <li><span class="parameter">headers</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         array of headers
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2><a name="Class_httpform"></a>Class httpform </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "httpform:add"></a>
+    <strong>httpform:add (form)</strong>
+    </dt>
+    <dd>
+    Add new part to form.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">form</span>
+            <span class="types"><span class="type">FORM_DESCRIPTION</span></span>
+         description
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../modules/cURL.html#Class_httpform">httpform</a></span>
+        self
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../modules/cURL.html#FORM_DESCRIPTION">FORM_DESCRIPTION</a>
+    </ul>
+
+
+</dd>
+</dl>
+    <h2><a name="Class_easy"></a>Class easy </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "easy:perfom"></a>
+    <strong>easy:perfom ([options])</strong>
+    </dt>
+    <dd>
+    Perform a file transfer
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">options</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../modules/cURL.html#Class_easy">easy</a></span>
+        self
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">e:perfom{writefunction = <span class="global">assert</span>(<span class="global">io</span>.open(<span class="string">"fname.txt"</span>, <span class="string">"w+b"</span>))}</pre>
+    </ul>
+
+</dd>
+</dl>
+    <h2><a name="Class_multi"></a>Class multi </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "multi:iperfom"></a>
+    <strong>multi:iperfom ()</strong>
+    </dt>
+    <dd>
+    Iterator that returns the next data, type and corresponding easy handle.
+
+ <br/>Returned data types: `response`, `header`, `data`, `error`, `done`.
+ <br/>Note. response data may appeare several times (e.g. if you proceed http request
+  with digest auth you should get 401 and 200 responses).
+
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">Iterator</span></span>
+        iterator for generic for
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.0</a></i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
