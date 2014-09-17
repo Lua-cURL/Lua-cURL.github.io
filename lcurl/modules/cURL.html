@@ -82,6 +82,10 @@
 	<td class="name" nowrap><a href="#form_buffer">form_buffer</a></td>
 	<td class="summary">Table describe buffer part in form.</td>
 	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#form_content">form_content</a></td>
+	<td class="summary">Table describe content part in form.</td>
+	</tr>
 </table>
 <h2><a href="#Class_httpform">Class httpform </a></h2>
 <table class="function_list">
@@ -156,7 +160,7 @@
     <h3>Fields:</h3>
     <ul>
         <li><span class="parameter">content_name</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a>, <a class="type" href="../modules/cURL.html#form">form_stream</a>, <a class="type" href="../modules/cURL.html#form">form_file</a> or <a class="type" href="../modules/cURL.html#form">form_buffer</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a>, <a class="type" href="../modules/cURL.html#form">form_stream</a>, <a class="type" href="../modules/cURL.html#form">form_file</a>, <a class="type" href="../modules/cURL.html#form">form_buffer</a> or <a class="type" href="../modules/cURL.html#form">form_content</a></span>
 
         </li>
     </ul>
@@ -200,6 +204,14 @@
      length  = length,
      name    = <span class="string">"stream2.txt"</span>,
      <span class="global">type</span>    = <span class="string">"text/plain"</span>,
+   },
+
+   <span class="comment">-- content form string
+</span>   name05 = <span class="string">'value05'</span>,
+
+   <span class="comment">-- content form string
+</span>   name06 = { <span class="string">'value06'</span>, <span class="comment">-- or content = 'value05'
+</span>     <span class="global">type</span>    = <span class="string">"text/plain"</span>,
    },
 
  }</pre>
@@ -296,6 +308,35 @@
         <li><span class="parameter">name</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          file name
+        </li>
+        <li><span class="parameter">type</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         mime type (e.g. 'text/plain')
+        </li>
+        <li><span class="parameter">headers</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         array of headers
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "form_content"></a>
+    <strong>form_content</strong>
+    </dt>
+    <dd>
+    Table describe content part in form.
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">content</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         value (or first field in table)
         </li>
         <li><span class="parameter">type</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
