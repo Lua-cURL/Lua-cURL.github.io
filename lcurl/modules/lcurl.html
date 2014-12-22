@@ -224,6 +224,10 @@
 	<td class="summary">Set options.</td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#multi:socket_action">multi:socket_action ([socket=curl.SOCKET_TIMEOUT[, mask=0]])</a></td>
+	<td class="summary">Perform socket action.</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#multi:setopt_timerfunction">multi:setopt_timerfunction (timer[, context])</a></td>
 	<td class="summary">Set timer callback.</td>
 	</tr>
@@ -365,6 +369,14 @@
 
 
 
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">
+ m = curl.multi{
+   socketfunction = handle_socket;
+   timerfunction  = start_timeout;
+ }</pre>
+    </ul>
 
 </dd>
     <dt>
@@ -1499,6 +1511,46 @@ c:setopt{
         <pre class="example">
  c:setopt(curl.OPT_MULTI_MAXCONNECTS, <span class="number">10</span>)
  c:setopt{maxconnects = <span class="number">10</span>}</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "multi:socket_action"></a>
+    <strong>multi:socket_action ([socket=curl.SOCKET_TIMEOUT[, mask=0]])</strong>
+    </dt>
+    <dd>
+    Perform socket action.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">socket</span>
+            <span class="types"><span class="type">number</span></span>
+
+         (<em>default</em> curl.SOCKET_TIMEOUT)
+        </li>
+        <li><span class="parameter">mask</span>
+            <span class="types"><span class="type">number</span></span>
+
+         (<em>default</em> 0)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../modules/lcurl.html#Class_multi">multi</a></span>
+        self
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">
+ c:socket_action()
+ c:socket_action(sock_fd, curl.CSELECT_IN)
+ c:socket_action(sock_fd, curl.CSELECT_OUT)</pre>
     </ul>
 
 </dd>

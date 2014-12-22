@@ -100,12 +100,20 @@
 	<td class="name" nowrap><a href="#easy:perfom">easy:perfom ([options])</a></td>
 	<td class="summary">Perform a file transfer</td>
 	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#easy.data">easy.data</a></td>
+	<td class="summary">User data.</td>
+	</tr>
 </table>
 <h2><a href="#Class_multi">Class multi </a></h2>
 <table class="function_list">
 	<tr>
 	<td class="name" nowrap><a href="#multi:iperform">multi:iperform ()</a></td>
 	<td class="summary">Iterator that returns the next data, type and corresponding easy handle.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#multi.data">multi.data</a></td>
+	<td class="summary">User data.</td>
 	</tr>
 </table>
 
@@ -423,6 +431,34 @@
     </ul>
 
 </dd>
+    <dt>
+    <a name = "easy.data"></a>
+    <strong>easy.data</strong>
+    </dt>
+    <dd>
+    User data.
+<p> Please use this field to associate any data with curl handle.
+
+
+
+    <ul>
+        <li><span class="parameter">data</span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">
+ f = <span class="global">io</span>.open(<span class="string">"lua.org.download"</span>, <span class="string">"w+"</span>)
+ e = curl.easy{url = <span class="string">"http://lua.org"</span>, writefunction = f}
+ e.data = f</pre>
+    </ul>
+
+</dd>
 </dl>
     <h2><a name="Class_multi"></a>Class multi </h2>
 
@@ -455,6 +491,27 @@
     <ul>
         <pre class="example"><span class="keyword">for</span> data, <span class="global">type</span>, easy <span class="keyword">in</span> m:iperform() <span class="keyword">do</span> ... <span class="keyword">end</span></pre>
     </ul>
+
+</dd>
+    <dt>
+    <a name = "multi.data"></a>
+    <strong>multi.data</strong>
+    </dt>
+    <dd>
+    User data.
+<p> Please use this field to associate any data with curl handle.
+
+
+
+    <ul>
+        <li><span class="parameter">data</span>
+
+        </li>
+    </ul>
+
+
+
+
 
 </dd>
 </dl>
